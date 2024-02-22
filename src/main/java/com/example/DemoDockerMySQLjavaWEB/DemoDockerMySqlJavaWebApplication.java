@@ -1,0 +1,13 @@
+package com.example.DemoDockerMySQLjavaWEB;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoDockerMySqlJavaWebApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemoDockerMySqlJavaWebApplication.class, args);
+	}
+
+}
