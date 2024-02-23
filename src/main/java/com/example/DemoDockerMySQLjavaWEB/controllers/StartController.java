@@ -5,8 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class StartController {
+
     @GetMapping()
-    public String myMenu(){
+    public String myMenu() {
         return "Start/menu";
     }
 }

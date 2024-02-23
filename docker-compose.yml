@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/USER_APP
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    restart: on-failure
+
+  db:
+    image: mysql
+    restart: on-failure
+    command: --default-authentication-plugin=caching_sha2_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: USER_APP
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: secret
+    ports:
+      - "3306:3306"
