@@ -15,14 +15,14 @@ public class PersonService {
     }
 
     public List<Person> getAllPeople(){
-        return personRepository.getAllPerson();
+        return personRepository.findAll();
     }
 
     public void savePerson(Person person){
-        personRepository.savePerson(person);
+        personRepository.save(person);
     }
 
     public void deletePerson(Long id){
-        personRepository.deletePersonById(id);
+        personRepository.deleteById(id);
     }
 }

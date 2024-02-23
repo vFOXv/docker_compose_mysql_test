@@ -37,7 +37,7 @@ public class PersonController {
 
 
     @DeleteMapping("/{id}")
-    public String deletePerson(Long id){
+    public String deletePerson(@PathVariable("id") Long id){
         personService.deletePerson(id);
         //может упасть - возможно надо указать в redirect /person ============================>>>>>>>>>>
         return "redirect:/show/all";
